@@ -58,9 +58,9 @@ setup(
     python_requires=">=3.6, <4",
     install_requires=["spacy>=3.0.0", "srsly>=2.4.0", "typer>=0.3.2"],
     extras_require={
-        "test": ["pytest"],
+        "test": ["pytest", "pytest-cov"],
         "graphviz": ["graphviz>=0.16"],
-        "all": ["pytest", "graphviz>=0.16"],
+        "all": ["pytest", "pytest-cov", "graphviz>=0.16"],
     },
     # To provide executable scripts, use entry points in preference to the
     # "scripts" keyword. Entry points provide cross-platform support and allow

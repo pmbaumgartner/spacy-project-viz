@@ -1,6 +1,7 @@
 from typer.testing import CliRunner
 import pytest
 from spacy_project_viz.cli import app
+from subprocess import call
 
 runner = CliRunner()
 
@@ -58,3 +59,19 @@ def test_graphviz_svg():
     result = runner.invoke(app, ["tests/project.yml", "--format", "graphviz-svg"])
     assert result.exit_code == 0
     assert "svg" in result.stdout
+
+
+def test_workflow():
+    result = runner.invoke(app, ["tests/project.yml", "--workflow", "all"])
+    assert result.exit_code == 0
+
+
+def test_error_workflow():
+    # A little weird that we aren't using pytest.raises
+    result = runner.invoke(app, ["tests/project.yml", "--workflow", "NOT A WORKFLOW"])
+    assert isinstance(result.exception, KeyError)
+
+
+def test_vars():
+    result = runner.invoke(app, ["tests/project.yml", "--vars"])
+    assert result.exit_code == 0

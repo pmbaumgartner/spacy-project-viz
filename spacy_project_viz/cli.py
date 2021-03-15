@@ -127,4 +127,4 @@ def viz(
 
 
 def main():
-    app()
+    app()  # pragma: no cover
