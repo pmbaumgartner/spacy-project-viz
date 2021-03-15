@@ -86,7 +86,7 @@ def viz(
     you will likely want to redirect the output to a file.
     e.g.
 
-    [command] --format mermaid-html > diagram.html
+      spacy-project-viz project.yml --format mermaid-html > diagram.html
     """
 
     project = srsly.read_yaml(project_yaml)
