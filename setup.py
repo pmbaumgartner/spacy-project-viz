@@ -34,10 +34,10 @@ setup(
     # This is a one-line description or tagline of what your project does. This
     # corresponds to the "Summary" metadata field:
     # https://packaging.python.org/specifications/core-metadata/#summary
-    description="A sample Python project",  # Optional
+    description="CLI Tool to help generate a mermaid.js or graphviz chart of commands, dependencies, outputs, and optionally variables from a spaCy project.yml file.",  # Optional
     # This field corresponds to the "Home-Page" metadata field:
     # https://packaging.python.org/specifications/core-metadata/#home-page-optional
-    url="https://github.com/pypa/sampleproject",  # Optional
+    url="https://github.com/pmbaumgartner/spacy-project-viz",  # Optional
     # This should be your name or the name of the organization which owns the
     # project.
     author="Peter Baumgartner",  # Optional
@@ -54,7 +54,7 @@ setup(
     #
     #   py_modules=["my_module"],
     #
-    packages=find_packages(where="viz"),  # Required
+    packages=find_packages(),  # Required
     python_requires=">=3.6, <4",
     install_requires=["spacy>=3.0.0", "srsly>=2.4.0", "typer>=0.3.2"],
     extras_require={"test": ["pytest"], "graphviz": ["graphviz>=0.16"]},
@@ -67,7 +67,7 @@ setup(
     # executes the function `main` from this package when invoked:
     entry_points={  # Optional
         "console_scripts": [
-            "spacy-project-viz=viz.cli:main",
+            "spacy-project-viz=spacy_project_viz.cli:main",
         ],
     },
 )
