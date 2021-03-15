@@ -7,7 +7,7 @@ from typing import Optional
 import srsly
 import typer
 
-from utils import (
+from spacy_project_viz.utils import (
     build_graph,
     create_graphviz_digraph,
     create_mermaid_definition,
