@@ -1,5 +1,7 @@
 # spaCy Project Viz
 
+[![codecov](https://codecov.io/gh/pmbaumgartner/spacy-project-viz/branch/main/graph/badge.svg?token=413Q1GHHOM)](https://codecov.io/gh/pmbaumgartner/spacy-project-viz)
+
 CLI Tool to help generate a mermaid.js or graphviz chart of commands, dependencies, outputs, and optionally variables from a spaCy project.yml file.
 
 **Example**
