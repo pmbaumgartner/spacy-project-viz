@@ -18,7 +18,9 @@ Only from github for now:
 pip install 'git+https://github.com/pmbaumgartner/spacy-project-viz.git#egg=spacy-project-viz'
 ```
 
-To use `graphviz`, there is a graphviz extra. This is intentional since graphviz will have to be installed on your system outside of pip. The `mermaid` commands will work regardless. To install:
+To use `graphviz`, you will need to install an extra. This is intentional since graphviz will have to be [installed](https://www.graphviz.org/download/) on your system outside of pip. The `mermaid` commands work without the `graphviz` extra. However, the layout options aren't as good with `mermaid`.
+
+To install with the `graphviz` extra:
 
 ```
 pip install 'git+https://github.com/pmbaumgartner/spacy-project-viz.git#egg=spacy-project-viz[graphviz]'
