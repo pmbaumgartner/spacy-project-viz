@@ -10,6 +10,8 @@ spacy-project-viz example/project.yml --vars -f graphviz-svg > example/graphviz.
 
 ![spacy project.yml viz](example/graphviz.svg)
 
+For more, see the `examples` folder.
+
 ## Installation
 
 Only from github for now:
